@@ -1,69 +1,424 @@
-<section class="join-form">
+<!DOCTYPE html>
+<html lang="en">
 
-  <h2>Enroll Now</h2>
+<head>
 
-  <form id="gymForm">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <input type="text" id="name" placeholder="Your Name" required>
+<title>Fitness Partner </title>
 
-    <input type="tel" id="phone" placeholder="Phone Number" required>
-
-    <input type="email" id="email" placeholder="Your Email" required>
-
-    <button type="submit">ENROLL NOW</button>
-
-  </form>
-
-</section>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:30px;
+}
+
+.hero a{
+background:#ff4d00;
+padding:15px 35px;
+color:white;
+text-decoration:none;
+font-size:20px;
+border-radius:10px;
+}
+
+/* PRICING */
+
+.pricing{
+padding:80px 20px;
+text-align:center;
+background:#1b1b1b;
+}
+
+.pricing h2{
+font-size:50px;
+margin-bottom:50px;
+}
+
+.price-cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#222;
+padding:40px;
+border-radius:20px;
+width:300px;
+}
+
+.card h3{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.card p{
+font-size:18px;
+margin-bottom:15px;
+}
+
+.card h1{
+font-size:50px;
+color:#ff4d00;
+margin-bottom:20px;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:80px 20px;
+text-align:center;
+}
+
+.gallery h2{
+font-size:50px;
+margin-bottom:50px;
+}
+
+.gallery-images{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.gallery-images img{
+width:350px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+}
+
+/* TESTIMONIAL */
+
+.testimonials{
+padding:80px 20px;
+background:#1b1b1b;
+text-align:center;
+}
+
+.testimonials h2{
+font-size:50px;
+margin-bottom:50px;
+}
+
+.testimonial-box{
+max-width:800px;
+margin:auto;
+background:#222;
+padding:40px;
+border-radius:20px;
+font-size:22px;
+line-height:1.8;
+}
+
+/* PAYMENT */
+
+.payment{
+padding:80px 20px;
+text-align:center;
+}
+
+.payment h2{
+font-size:50px;
+margin-bottom:30px;
+}
+
+.payment a{
+display:inline-block;
+padding:15px 40px;
+background:#ff4d00;
+color:white;
+text-decoration:none;
+font-size:22px;
+border-radius:10px;
+}
+
+/* FORM */
+
 .join-form{
-  padding:60px 20px;
-  background:#f5f5f5;
-  text-align:center;
+padding:80px 20px;
+background:#1b1b1b;
+text-align:center;
 }
 
 .join-form h2{
-  font-size:48px;
-  margin-bottom:30px;
-  font-weight:bold;
+font-size:55px;
+margin-bottom:40px;
 }
 
 #gymForm{
-  max-width:500px;
-  margin:auto;
-  background:white;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+max-width:500px;
+margin:auto;
+background:#222;
+padding:40px;
+border-radius:20px;
 }
 
 #gymForm input{
-  width:100%;
-  padding:15px;
-  margin-bottom:20px;
-  border:1px solid #ccc;
-  border-radius:10px;
-  font-size:18px;
+width:100%;
+padding:16px;
+margin-bottom:20px;
+border:none;
+border-radius:10px;
+font-size:18px;
 }
 
 #gymForm button{
-  background:#ff4d00;
-  color:white;
-  border:none;
-  padding:15px 40px;
-  font-size:20px;
-  border-radius:10px;
-  cursor:pointer;
-  transition:0.3s;
+background:#ff4d00;
+color:white;
+border:none;
+padding:16px 40px;
+font-size:20px;
+border-radius:10px;
+cursor:pointer;
 }
 
-#gymForm button:hover{
-  background:#e63e00;
+/* FOOTER */
+
+footer{
+padding:30px;
+text-align:center;
+background:black;
+font-size:18px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:30px;
+text-decoration:none;
+z-index:1000;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.pricing h2,
+.gallery h2,
+.testimonials h2,
+.payment h2,
+.join-form h2{
+font-size:38px;
+}
+
+.gallery-images img{
+width:100%;
+}
+
 }
 
 </style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>FITNESS PARTNER</h1>
+
+<p>Transform Your Body & Mind</p>
+
+<a href="#join">Join Now</a>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section class="pricing">
+
+<h2>Membership Plans</h2>
+
+<div class="price-cards">
+
+<div class="card">
+<h3>Basic</h3>
+<h1>₹999</h1>
+<p>1 Month Access</p>
+<p>Gym Equipment</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<h1>₹2499</h1>
+<p>3 Months Access</p>
+<p>Personal Trainer</p>
+</div>
+
+<div class="card">
+<h3>Pro</h3>
+<h1>₹4999</h1>
+<p>6 Months Access</p>
+<p>Diet Plan Included</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<h2>Gym Gallery</h2>
+
+<div class="gallery-images">
+
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="testimonials">
+
+<h2>What Our Members Say</h2>
+
+<div class="testimonial-box">
+
+"Fitness Partner completely changed my life. Amazing trainers, great atmosphere and excellent results!"
+
+<br><br>
+
+- Rahul Sharma
+
+</div>
+
+</section>
+
+<!-- PAYMENT -->
+
+<section class="payment">
+
+<h2>Pay Membership Fees</h2>
+
+<a href="#">Pay Now</a>
+
+</section>
+
+<!-- FORM -->
+
+<section class="join-form" id="join">
+
+<h2>Enroll Now</h2>
+
+<form id="gymForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<button type="submit">ENROLL NOW</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Fitness Partner Gym | All Rights Reserved
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/919372623973" class="whatsapp" target="_blank">
+
+💬
+
+</a>
+
+<!-- GOOGLE FORM SCRIPT -->
 
 <script>
 
@@ -77,39 +432,28 @@ const email = document.getElementById("email").value;
 
 /*
 IMPORTANT:
-
-You must replace these ENTRY IDs with your real Google Form entry IDs.
-
-HOW TO GET THEM:
-
-1. Open Google Form
-2. Click ⋮ (3 dots)
-3. Get pre-filled link
-4. Fill sample data
-5. Click Get Link
-6. Copy the generated URL
-7. You will see:
-
-entry.123456=value
-
-Use those numbers below.
+REPLACE THESE ENTRY IDs WITH YOUR REAL GOOGLE FORM ENTRY IDs
 */
 
 const formURL =
 "https://docs.google.com/forms/d/e/1FAIpQLSdeK9K7FniCCoQ6ZM5wgDPqf9EogE5in6nQBxuxEQiokxJQ6w/formResponse?"
-+ "entry.111111=" + encodeURIComponent(name)
-+ "&entry.222222=" + encodeURIComponent(phone)
-+ "&entry.333333=" + encodeURIComponent(email);
++ "entry.1111111111=" + encodeURIComponent(name)
++ "&entry.2222222222=" + encodeURIComponent(phone)
++ "&entry.3333333333=" + encodeURIComponent(email);
 
 fetch(formURL,{
 method:"POST",
 mode:"no-cors"
 });
 
-alert("Enrollment Successful!");
+alert("Thank You For Joining Fitness Partner!");
 
 document.getElementById("gymForm").reset();
 
 });
 
 </script>
+
+</body>
+
+</html>
