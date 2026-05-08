@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fitness Partner </title>
+<title>Fitness Partner Gym</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -46,7 +47,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.65);
 }
 
 .hero-content{
@@ -55,34 +56,39 @@ z-index:2;
 }
 
 .hero h1{
-font-size:70px;
+font-size:75px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:24px;
-margin-bottom:30px;
+font-size:26px;
+margin-bottom:35px;
 }
 
 .hero a{
 background:#ff4d00;
-padding:15px 35px;
+padding:16px 40px;
 color:white;
 text-decoration:none;
-font-size:20px;
+font-size:22px;
 border-radius:10px;
+transition:0.3s;
+}
+
+.hero a:hover{
+background:#e63e00;
 }
 
 /* PRICING */
 
 .pricing{
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
 background:#1b1b1b;
 }
 
 .pricing h2{
-font-size:50px;
+font-size:55px;
 margin-bottom:50px;
 }
 
@@ -98,16 +104,16 @@ background:#222;
 padding:40px;
 border-radius:20px;
 width:300px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 
 .card h3{
 font-size:35px;
 margin-bottom:20px;
-}
-
-.card p{
-font-size:18px;
-margin-bottom:15px;
 }
 
 .card h1{
@@ -116,15 +122,20 @@ color:#ff4d00;
 margin-bottom:20px;
 }
 
+.card p{
+font-size:18px;
+margin-bottom:12px;
+}
+
 /* GALLERY */
 
 .gallery{
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
 }
 
 .gallery h2{
-font-size:50px;
+font-size:55px;
 margin-bottom:50px;
 }
 
@@ -140,57 +151,88 @@ width:350px;
 height:250px;
 object-fit:cover;
 border-radius:20px;
+transition:0.3s;
 }
 
-/* TESTIMONIAL */
+.gallery-images img:hover{
+transform:scale(1.05);
+}
+
+/* TESTIMONIALS */
 
 .testimonials{
-padding:80px 20px;
+padding:90px 20px;
 background:#1b1b1b;
 text-align:center;
 }
 
 .testimonials h2{
-font-size:50px;
+font-size:55px;
 margin-bottom:50px;
 }
 
+.testimonial-container{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+}
+
 .testimonial-box{
-max-width:800px;
-margin:auto;
 background:#222;
-padding:40px;
+padding:30px;
 border-radius:20px;
-font-size:22px;
+max-width:350px;
+font-size:18px;
 line-height:1.8;
+transition:0.3s;
+}
+
+.testimonial-box:hover{
+transform:translateY(-10px);
+}
+
+.testimonial-box h3{
+margin-top:20px;
+color:#ff4d00;
 }
 
 /* PAYMENT */
 
 .payment{
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
 }
 
 .payment h2{
-font-size:50px;
+font-size:55px;
+margin-bottom:20px;
+}
+
+.payment p{
+font-size:22px;
 margin-bottom:30px;
 }
 
-.payment a{
+.pay-btn{
 display:inline-block;
-padding:15px 40px;
+padding:16px 45px;
 background:#ff4d00;
 color:white;
 text-decoration:none;
 font-size:22px;
 border-radius:10px;
+transition:0.3s;
+}
+
+.pay-btn:hover{
+background:#e63e00;
 }
 
 /* FORM */
 
 .join-form{
-padding:80px 20px;
+padding:90px 20px;
 background:#1b1b1b;
 text-align:center;
 }
@@ -225,6 +267,11 @@ padding:16px 40px;
 font-size:20px;
 border-radius:10px;
 cursor:pointer;
+transition:0.3s;
+}
+
+#gymForm button:hover{
+background:#e63e00;
 }
 
 /* FOOTER */
@@ -253,6 +300,7 @@ border-radius:50%;
 font-size:30px;
 text-decoration:none;
 z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* MOBILE */
@@ -295,7 +343,7 @@ width:100%;
 
 <h1>FITNESS PARTNER</h1>
 
-<p>Transform Your Body & Mind</p>
+<p>Transform Your Body & Mind With Expert Training</p>
 
 <a href="#join">Join Now</a>
 
@@ -316,6 +364,7 @@ width:100%;
 <h1>₹999</h1>
 <p>1 Month Access</p>
 <p>Gym Equipment</p>
+<p>Cardio Training</p>
 </div>
 
 <div class="card">
@@ -323,13 +372,15 @@ width:100%;
 <h1>₹2499</h1>
 <p>3 Months Access</p>
 <p>Personal Trainer</p>
+<p>Diet Guidance</p>
 </div>
 
 <div class="card">
 <h3>Pro</h3>
 <h1>₹4999</h1>
 <p>6 Months Access</p>
-<p>Diet Plan Included</p>
+<p>Advanced Training</p>
+<p>Full Diet Plan</p>
 </div>
 
 </div>
@@ -354,19 +405,38 @@ width:100%;
 
 </section>
 
-<!-- TESTIMONIAL -->
+<!-- TESTIMONIALS -->
 
 <section class="testimonials">
 
 <h2>What Our Members Say</h2>
 
+<div class="testimonial-container">
+
 <div class="testimonial-box">
+"Best gym in the city! Trainers are extremely supportive and motivating."
+<h3>- Rahul Sharma</h3>
+</div>
 
-"Fitness Partner completely changed my life. Amazing trainers, great atmosphere and excellent results!"
+<div class="testimonial-box">
+"I lost 12kg in 4 months. Amazing environment and great workout plans."
+<h3>- Priya Mehta</h3>
+</div>
 
-<br><br>
+<div class="testimonial-box">
+"Excellent equipment, professional staff and very clean gym."
+<h3>- Aman Verma</h3>
+</div>
 
-- Rahul Sharma
+<div class="testimonial-box">
+"The personal training sessions completely transformed my fitness journey."
+<h3>- Sneha Kapoor</h3>
+</div>
+
+<div class="testimonial-box">
+"Affordable pricing with premium quality facilities. Highly recommended!"
+<h3>- Arjun Patel</h3>
+</div>
 
 </div>
 
@@ -378,7 +448,14 @@ width:100%;
 
 <h2>Pay Membership Fees</h2>
 
-<a href="#">Pay Now</a>
+<p>Secure UPI Payment</p>
+
+<a href="upi://pay?pa=mathewiob@ybl&pn=Fitness Partner&cu=INR"
+class="pay-btn">
+
+Pay Now
+
+</a>
 
 </section>
 
